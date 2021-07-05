@@ -73,7 +73,7 @@ export default {
 					dmg: -gun.damage * bullets,
 					hml:  high + " / " + mid + " / " + low,
 					stk: stkHigh + " / " + stkMid + " / " + stkLow,
-					ttk: Math.round(Math.floor(100 / mid) * gun.cycle * 1000),
+					ttk: Math.round((stkMid - 1) * gun.cycle * 1000),
 				}
 			}).sort((a, b) => a[this.sortBy] > b[this.sortBy] ? 1 : -1);
 		}
