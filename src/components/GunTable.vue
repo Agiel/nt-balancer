@@ -16,8 +16,8 @@
 			</tr>
 			<tr v-for="gun in gunTable" :key="gun.name">
 				<td class="gun">{{gun.name}}</td>
-				<td class="dmg"><input v-model="gunData[gun.id].damage"></td>
-				<td class="ccl"><input v-model="gunData[gun.id].cycle"></td>
+				<td class="dmg"><input v-model.lazy="gunData[gun.id].damage"></td>
+				<td class="ccl"><input v-model.lazy="gunData[gun.id].cycle"></td>
 				<!-- <td>{{gun.penetration}}</td> -->
 				<td class="hml">{{gun.hml}}</td>
 				<td class="stk">{{gun.stk}}</td>
