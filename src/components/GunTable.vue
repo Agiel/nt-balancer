@@ -50,16 +50,16 @@ export default {
 		gunTable() {
 			return this.gunData.map((gun, id) => {
 				let modifier = {
-					Recon: 1.12,
-					Assault: 0.97,
-					Support: 0.5
+					Recon: 1.485,
+					Assault: 1.2375,
+					Support: 0.66
 				};
 				let dmg = gun.damage * modifier[this.currentClass];
 				let bullets = gun.bullets || 1;
 
-				let mid = (dmg * bullets).toFixed(0);
-				let low = (dmg * 0.8 * bullets).toFixed(0);
-				let high = (dmg * 1.35 * bullets).toFixed(0);
+				let mid = (dmg * 0.75 * bullets).toFixed(2);
+				let low = (dmg * 0.6 * bullets).toFixed(2);
+				let high = (dmg * bullets).toFixed(2);
 
 				let stkHigh = Math.ceil(100 / high);
 				let stkMid = Math.ceil(100 / mid);
@@ -98,7 +98,7 @@ input {
 }
 
 .hml {
-	width: 160px;
+	width: 180px;
 }
 
 .stk {
